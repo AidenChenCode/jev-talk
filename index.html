@@ -291,13 +291,13 @@ body.idle{cursor:none}
 .deeper p strong{color:var(--sky)}
 
 /* ---------- 10 cases ---------- */
-.grid4{position:absolute;left:96px;right:96px;top:196px;bottom:126px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.grid4 .cc{height:auto;padding:14px 14px 20px;display:flex;flex-direction:column}
-.cs .media{height:300px;display:grid;place-items:center;background:#0E1626;overflow:hidden}
-.cs .media img,.cs .media video{max-width:100%;max-height:100%;display:block}
-.cs .chip{margin:18px 10px 0}
-.cs h3{margin:10px 10px 0}
-.cs p{margin:10px 10px 0;font-size:17px;line-height:1.65}
+.grid4{position:absolute;left:96px;right:96px;top:192px;bottom:118px;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);gap:20px}
+.grid4 .cc{height:auto;padding:16px;display:flex;flex-direction:row;gap:22px;align-items:center}
+.cs .media{flex:none;width:410px;aspect-ratio:16/9;display:grid;place-items:center;background:#0E1626;overflow:hidden}
+.cs .media img,.cs .media video{width:100%;height:100%;object-fit:contain;display:block}
+.cs .tx{min-width:0}
+.cs h3{margin-top:10px;font-size:23px}
+.cs p{margin-top:10px;font-size:17px;line-height:1.65}
 
 /* ---------- 12 references ---------- */
 .refs .head{top:60px}
@@ -640,10 +640,10 @@ body.idle{cursor:none}
       <h2 class="title rise">杰出表现：四个社区案例</h2>
     </header>
     <div class="grid4">
-      <article class="cc cs rise" style="--d:140"><div class="media"><video src="media/browser.mp4" autoplay muted loop playsinline preload="auto" aria-label="Jev Ultrafast演示动图"></video></div><span class="chip"><i></i>浏览器 Agent</span><h3>Jev Ultrafast</h3><p>网页上点按钮本质是多选题：Jev 读 DOM 结构，毫秒级选出要点的元素，只在打字时回退给小模型。苏黎世→伦敦查机票约 7 秒，成本 $0.0039（1 倍速演示）。</p></article>
-      <article class="cc cs rise" style="--d:210"><div class="media"><video src="media/compaction.mp4" autoplay muted loop playsinline preload="auto" aria-label="fast-jev-compaction演示动图"></video></div><span class="chip"><i></i>编码 Agent</span><h3>fast-jev-compaction</h3><p>Claude Code 插件：用 Jev 给每次工具调用打分，毫秒级丢弃无关终端日志，核心代码与状态原样保留，压缩上下文不再卡顿、失忆，也省 token。</p></article>
-      <article class="cc cs rise" style="--d:280"><div class="media"><video src="media/ecommerce.mp4" autoplay muted loop playsinline preload="auto" aria-label="救活零销量网店演示动图"></video></div><span class="chip"><i></i>电商选品</span><h3>救活零销量网店</h3><p>Opus 5.5 + Jev 接手 14 个月零销量的 Shopify 店：Jev 先定商品、老客户、弃购车的去留，拿不准的才交给 Opus。72 小时 23 单、$1,410，AI 账单 $38。</p></article>
-      <article class="cc cs rise" style="--d:350"><div class="media"><video src="media/kg.mp4" autoplay muted loop playsinline preload="auto" aria-label="neo4jev演示动图"></video></div><span class="chip"><i></i>知识图谱</span><h3>neo4jev</h3><p>把节点的出边列成选项，一次调用同时返回各边概率和“到达目标了吗”，再按概率束搜索选路径。每一跳都有概率可查，不会编造不存在的边。</p></article>
+      <article class="cc cs rise" style="--d:140"><div class="media"><video src="media/browser.mp4" autoplay muted loop playsinline preload="auto" aria-label="Jev Ultrafast演示动图"></video></div><div class="tx"><span class="chip"><i></i>浏览器 Agent</span><h3>Jev Ultrafast</h3><p>网页上点按钮本质是多选题：Jev 读 DOM 结构，毫秒级选出要点的元素，只在打字时回退给小模型。苏黎世→伦敦查机票约 7 秒，成本 $0.0039（1 倍速演示）。</p></div></article>
+      <article class="cc cs rise" style="--d:210"><div class="media"><video src="media/compaction.mp4" autoplay muted loop playsinline preload="auto" aria-label="fast-jev-compaction演示动图"></video></div><div class="tx"><span class="chip"><i></i>编码 Agent</span><h3>fast-jev-compaction</h3><p>Claude Code 插件：用 Jev 给每次工具调用打分，毫秒级丢弃无关终端日志，核心代码与状态原样保留，压缩上下文不再卡顿、失忆，也省 token。</p></div></article>
+      <article class="cc cs rise" style="--d:280"><div class="media"><video src="media/ecommerce.mp4" autoplay muted loop playsinline preload="auto" aria-label="救活零销量网店演示动图"></video></div><div class="tx"><span class="chip"><i></i>电商选品</span><h3>救活零销量网店</h3><p>Opus 5.5 + Jev 接手 14 个月零销量的 Shopify 店：Jev 先定商品、老客户、弃购车的去留，拿不准的才交给 Opus。72 小时 23 单、$1,410，AI 账单 $38。</p></div></article>
+      <article class="cc cs rise" style="--d:350"><div class="media"><video src="media/kg.mp4" autoplay muted loop playsinline preload="auto" aria-label="neo4jev演示动图"></video></div><div class="tx"><span class="chip"><i></i>知识图谱</span><h3>neo4jev</h3><p>把节点的出边列成选项，一次调用同时返回各边概率和“到达目标了吗”，再按概率束搜索选路径。每一跳都有概率可查，不会编造不存在的边。</p></div></article>
     </div>
     <footer class="foot"><span>来源：GitHub browser-use/jev-ultrafast、tamaratran/fast-jev-compaction、jexp/neo4jev；电商选品案例为网友自述</span><span class="pg">10 / 13</span></footer>
     <aside class="notes">再看四个社区里跑出来的亮眼案例。浏览器 Agent：点按钮本质是选择题，Jev 读网页结构，毫秒级选出要点的元素，查一趟机票约 7 秒、成本不到 3 分钱。编码 Agent：用 Jev 给工具输出打分，丢掉无关日志，压缩上下文不再卡顿。电商选品：Jev 先做约 1.9 万次去留判断，拿不准的才交给 Opus，72 小时卖出 23 单，AI 账单 38 美元。知识图谱：每一跳让 Jev 给出边打概率，路径可查、不会编造。共同点是：高频的小判断交给 Jev，少数需要动脑的步骤才交给大模型。</aside>
